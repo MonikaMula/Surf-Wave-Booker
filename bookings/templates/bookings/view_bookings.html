@@ -1,0 +1,9 @@
+{% extends 'bookings/base_generic.html' %}
+{% block content %}
+<h2>My Bookings</h2>
+<ul>
+    {% for booking in bookings %}
+        <li>{{ booking.lesson.title }} on {{ booking.lesson.date }} at {{ booking.lesson.time }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
