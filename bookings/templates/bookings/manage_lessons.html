@@ -1,9 +1,18 @@
-{% extends 'bookings/base_generic.html' %}
-{% block content %}
-<h2>Manage Lessons</h2>
-<ul>
-    {% for lesson in lessons %}
-        <li>{{ lesson.title }} on {{ lesson.date }} at {{ lesson.time }}</li>
-    {% endfor %}
-</ul>
-{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Lessons</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Manage Lessons</h1>
+    <ul>
+        {% for lesson in lessons %}
+            <li>{{ lesson.title }} - {{ lesson.date }} at {{ lesson.time }} ({{ lesson.current_participants }} participants)</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
