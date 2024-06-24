@@ -1,18 +1,43 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Lessons</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-<body>
-    <h1>Manage Lessons</h1>
-    <ul>
+{% extends 'base_generic.html' %}
+
+{% block title %}Manage Lessons{% endblock %}
+
+{% block content %}
+<h1>Manage Lessons</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Duration</th>
+            <th>Instructor</th>
+            <th>Category</th>
+            <th>Participants</th>
+            <th>Max Participants</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
         {% for lesson in lessons %}
-            <li>{{ lesson.title }} - {{ lesson.date }} at {{ lesson.time }} ({{ lesson.current_participants }} participants)</li>
+        <tr>
+            <td>{{ lesson.title }}</td>
+            <td>{{ lesson.description }}</td>
+            <td>{{ lesson.date }}</td>
+            <td>{{ lesson.time }}</td>
+            <td>{{ lesson.duration }}</td>
+            <td>{{ lesson.instructor }}</td>
+            <td>{{ lesson.get_category_display }}</td>
+            <td>{{ lesson.current_participants }}</td>
+            <td>{{ lesson.max_participants }}</td>
+            <td>
+                <!-- Add actions like Edit and Delete here -->
+                <a href="{% url 'edit_lesson' lesson.id %}">Edit</a> |
+                <a href="{% url 'delete_lesson' lesson.id %}">Delete</a>
+            </td>
+        </tr>
         {% endfor %}
-    </ul>
-</body>
-</html>
+    </tbody>
+</table>
+{% endblock %}

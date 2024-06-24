@@ -1,18 +1,30 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Bookings</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-<body>
-    <h1>Your Bookings</h1>
-    <ul>
+<!-- templates/view_bookings.html -->
+{% extends 'base_generic.html' %}
+
+{% block title %}View Bookings{% endblock %}
+
+{% block content %}
+<h1>Your Bookings</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Lesson</th>
+            <th>Instructor</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Duration</th>
+        </tr>
+    </thead>
+    <tbody>
         {% for booking in bookings %}
-            <li>{{ booking.lesson.title }} on {{ booking.lesson.date }} at {{ booking.lesson.time }}</li>
+        <tr>
+            <td>{{ booking.lesson.title }}</td>
+            <td>{{ booking.lesson.instructor }}</td>
+            <td>{{ booking.lesson.date }}</td>
+            <td>{{ booking.lesson.time }}</td>
+            <td>{{ booking.lesson.duration }}</td>
+        </tr>
         {% endfor %}
-    </ul>
-</body>
-</html>
+    </tbody>
+</table>
+{% endblock %}
