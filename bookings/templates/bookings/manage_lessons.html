@@ -32,8 +32,7 @@
             <td>{{ lesson.current_participants }}</td>
             <td>{{ lesson.max_participants }}</td>
             <td>
-                <!-- Add actions like Edit and Delete here -->
-                <a href="{% url 'edit_lesson' lesson.id %}">Edit</a> |
+                <a href="{% url 'edit_lesson' lesson.id %}">Edit</a> 
                 <a href="{% url 'delete_lesson' lesson.id %}">Delete</a>
             </td>
         </tr>

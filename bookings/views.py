@@ -1,7 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from .models import Lesson, Booking
 from .forms import BookingForm
+from .models import Lesson, Booking
+
+def home(request):
+    return render(request, 'home.html')
 
 @login_required
 def book_lesson(request):

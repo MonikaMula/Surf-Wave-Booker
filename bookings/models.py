@@ -14,7 +14,6 @@ class Lesson(models.Model):
         ('family', 'Family Surfing Classes'),
         ('senior', 'Senior Surfing Lessons'),
         ('couples', 'Couples Surfing Classes'),
-        # Add more categories as needed
     ]
 
     title = models.CharField(max_length=100)
