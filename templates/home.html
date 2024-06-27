@@ -1,13 +1,10 @@
+{% load static %}
 {% extends 'base_generic.html' %}
 
-{% block title %}Home{% endblock %}
-
 {% block content %}
-<h1>Welcome to Surf Wave Booker</h1>
-<p>Your one-stop solution for booking surfing lessons.</p>
-<ul>
-    <li><a href="{% url 'book_lesson' %}">Book a Lesson</a></li>
-    <li><a href="{% url 'view_bookings' %}">View Your Bookings</a></li>
-    <li><a href="{% url 'manage_lessons' %}">Manage Lessons</a></li>
-</ul>
+<div class="hero">
+    <h1>Welcome to Surf Wave Booker</h1>
+    <p>Your ultimate destination for surfboard rentals and lessons</p>
+    <a href="{% url 'book_lesson' %}" class="btn btn-primary">Book Now</a>
+</div>
 {% endblock %}

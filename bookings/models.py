@@ -38,6 +38,8 @@ class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
     booking_date = models.DateTimeField(auto_now_add=True)
+    date = models.DateField()
+    time = models.TimeField()
 
     def clean(self):
         if self.lesson.is_full():

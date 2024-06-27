@@ -9,7 +9,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Security settings
 SECRET_KEY = env('SECRET_KEY')
-DEBUG = env.bool('DEBUG', default=False)
+DEBUG = env.bool('DEBUG', default=True)
 ALLOWED_HOSTS = []
 
 # Application definition
@@ -83,6 +83,7 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

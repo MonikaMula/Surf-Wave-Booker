@@ -1,3 +1,4 @@
+{% load static %}
 {% extends 'base_generic.html' %}
 
 {% block title %}Manage Lessons{% endblock %}
@@ -32,7 +33,7 @@
             <td>{{ lesson.current_participants }}</td>
             <td>{{ lesson.max_participants }}</td>
             <td>
-                <a href="{% url 'edit_lesson' lesson.id %}">Edit</a> 
+                <a href="{% url 'edit_lesson' lesson.id %}">Edit</a> |
                 <a href="{% url 'delete_lesson' lesson.id %}">Delete</a>
             </td>
         </tr>

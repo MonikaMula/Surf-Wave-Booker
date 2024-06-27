@@ -3,15 +3,14 @@ from django.contrib.auth.decorators import login_required
 from .forms import BookingForm
 from .models import Lesson, Booking
 
-def home(request):
-    return render(request, 'home.html')
-
 @login_required
 def book_lesson(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
-            form.save()
+            booking = form.save(commit=False)
+            booking.user = request.user
+            booking.save()
             return redirect('view_bookings')
     else:
         form = BookingForm()
@@ -28,3 +27,6 @@ def manage_lessons(request):
         lessons = Lesson.objects.all()
         return render(request, 'bookings/manage_lessons.html', {'lessons': lessons})
     return redirect('home')
+
+def home(request):
+    return render(request, 'home.html')
