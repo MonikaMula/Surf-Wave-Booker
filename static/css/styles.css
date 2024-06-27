@@ -1,25 +1,31 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 header {
-    background-color: #333;
+    background-color: #343a40;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
     color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    margin: 0;
 }
 
 header nav ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    gap: 1rem;
 }
 
 header nav ul li {
     display: inline;
-    margin-right: 10px;
 }
 
 header nav ul li a {
@@ -27,38 +33,70 @@ header nav ul li a {
     text-decoration: none;
 }
 
-main {
-    padding: 20px;
+.hero {
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    color: white;
+}
+
+.hero .hero-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero .hero-text h1 {
+    font-size: 4rem;
+}
+
+.hero .hero-text p {
+    font-size: 1.5rem;
+}
+
+.hero .hero-text .btn {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.my-5 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 footer {
-    background-color: #333;
+    background-color: #343a40;
     color: #fff;
-    padding: 10px 0;
     text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 2rem 0;
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.social-links {
-    margin-top: 10px;
-}
-
-.social-links a {
-    color: #fff;
-    margin: 0 10px;
+footer a {
+    color: #007bff;
     text-decoration: none;
-    font-size: 20px;
+    margin: 0 1rem;
 }
 
-.social-links a:hover {
-    color: #ccc;
+footer .social-links a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #007bff;
 }

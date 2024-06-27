@@ -1,10 +1,58 @@
-{% load static %}
 {% extends 'base_generic.html' %}
+{% load static %}
 
 {% block content %}
-<div class="hero">
-    <h1>Welcome to Surf Wave Booker</h1>
-    <p>Your ultimate destination for surfboard rentals and lessons</p>
-    <a href="{% url 'book_lesson' %}" class="btn btn-primary">Book Now</a>
+<div class="hero" style="background-image: url('{% static 'images/hero.jpg' %}');">
+    <div class="hero-text container">
+        <h1>Welcome to Surf Wave Booker</h1>
+        <p>Your ultimate destination for surfboard rentals and lessons</p>
+        <a href="{% url 'book_lesson' %}" class="btn btn-primary">Book Now</a>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row text-center">
+        <div class="col">
+            <h2>Surfboard Rental</h2>
+            <p>Choose from a wide range of surfboards to rent for your next surfing adventure.</p>
+            <a href="{% url 'book_lesson' %}" class="btn btn-primary">Book a Surfboard</a>
+        </div>
+        <div class="col">
+            <h2>Surfing Lessons</h2>
+            <p>Learn to surf with our experienced instructors in a safe and fun environment.</p>
+            <a href="{% url 'book_lesson' %}" class="btn btn-primary">Book a Lesson</a>
+        </div>
+        <div class="col">
+            <h2>Group Sessions</h2>
+            <p>Join group sessions and enjoy surfing with others while learning new skills.</p>
+            <a href="{% url 'book_lesson' %}" class="btn btn-primary">Book a Group Session</a>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <h2 class="text-center">What Our Customers Say</h2>
+    <blockquote class="blockquote text-center">
+        <p class="mb-0">"Amazing surfing lessons! Highly recommend."</p>
+        <footer class="blockquote-footer">Monty Morgan</footer>
+    </blockquote>
+    <blockquote class="blockquote text-center">
+        <p class="mb-0">"Great instructors and fantastic service!"</p>
+        <footer class="blockquote-footer">Mulan Mak</footer>
+    </blockquote>
+    <div class="text-center">
+        <a href="{% url 'book_lesson' %}" class="btn btn-primary">Join Our Happy Customers</a>
+    </div>
+</div>
+
+<div class="container my-5">
+    <h2 class="text-center">Frequently Asked Questions</h2>
+    <h5>How do I book a lesson?</h5>
+    <p>You can book a lesson by clicking on the "Book Now" button and filling out the form.</p>
+    <h5>What should I bring to my lesson?</h5>
+    <p>We recommend bringing a swimsuit, towel, sunscreen, and a positive attitude!</p>
+    <div class="text-center">
+        <a href="{% url 'book_lesson' %}" class="btn btn-primary">Book Your Lesson Now</a>
+    </div>
 </div>
 {% endblock %}
