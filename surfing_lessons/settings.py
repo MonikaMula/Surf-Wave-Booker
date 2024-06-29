@@ -1,6 +1,8 @@
 import os
 from pathlib import Path
 import environ
+import django_heroku
+import dj_database_url
 
 # Initialize environment variables
 env = environ.Env()
@@ -9,7 +11,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Security settings
 SECRET_KEY = env('SECRET_KEY')
-DEBUG = env.bool('DEBUG', default=True)
+DEBUG = env.bool('DEBUG', default=False)
 ALLOWED_HOSTS = ['127.0.0.1:8000', '127.0.0.1','.herokuapp.com', 'surfwavebooker.herokuapp.com', 'surfwavebooker-06be2e55d2c6.herokuapp.com']
 
 # Application definition
@@ -60,6 +62,9 @@ WSGI_APPLICATION = 'surfing_lessons.wsgi.application'
 
 DATABASES = {
     'default': env.db(),
+    'default': dj_database_url.config(
+        default=env('DATABASE_URL')
+    )
 }
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -99,3 +104,6 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Apply Django-Heroku settings
+django_heroku.settings(locals())
