@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
 </head>
 <body>
     <header class="bg-dark text-white">
@@ -29,28 +36,27 @@
     <main>
         {% block content %}{% endblock %}
     </main>
-    <footer class="bg-dark text-white py-3">
-        <div class="container text-center">
+    <footer class="bg-dark text-white text-center py-4">
+        <div>
             <p>&copy; 2024 Surf Wave Booker</p>
-            <p>123 Surfing Lane, Beach City, CA 12345 | Email: info@surfrental.com | Phone: (123) 456-7890</p>
-            <div class="social-links">
-                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Our Facebook Page">
-                    <i class="fa fa-facebook-square"></i>
-                </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Our Twitter Page">
-                    <i class="fa fa-twitter-square"></i>
-                </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Our Instagram Page">
-                    <i class="fa fa-instagram"></i>
-                </a>
-                <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="Our YouTube Channel">
-                    <i class="fa fa-youtube-square"></i>
-                </a>
+        
+        <div class="contact">  
+            <h2>Contact Us</h2>
+            <p>Streedagh Beach - Benbulben Office | Email: info@surfwavebooker.com | Email: info@surfwavebooker.com | Phone: (123) 456-7890</p>
+        </div>
+            <p>Follow Us 🌅🏄‍♀️🏄‍♂️🌊:</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Our Facebook Page" class="fab fa-facebook"></a>
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Our Twitter Profile" class="fab fa-twitter"></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Our Instagram Profile" class="fab fa-instagram"></a>
+                <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="Our YouTube Channel" class="fab fa-youtube"></a>
             </div>
         </div>
     </footer>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>

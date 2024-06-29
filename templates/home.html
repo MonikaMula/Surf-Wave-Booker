@@ -1,45 +1,40 @@
 {% extends 'base_generic.html' %}
 {% load static %}
 
+{% block title %}Home{% endblock %}
+
 {% block content %}
-<div class="hero">
-    <div class="container">
-        <h1>Welcome to Surf Wave Booker</h1>
-        <p>Your ultimate destination for surfboard rentals and lessons</p>
+<div class="hero-section">
+    <img src="{% static 'images/hero.jpg' %}" alt="Surfing">
+    <div class="hero-text">
+        <h2>Welcome to Surf Fun Experience</h2>
+        <p>Your go-to platform for booking surfing lessons!</p>
         <a href="{% url 'book_lesson' %}" class="btn btn-primary">Book Now</a>
     </div>
 </div>
-
-<div class="container my-5">
+<div class="services-section">
     <h2>Our Services</h2>
-    <div class="row">
-        <div class="col-md-4">
+    <div class="services">
+        <div class="service">
+            <img src="{% static 'images/surfboard_rental.jpg' %}" alt="Surfboard Rental">
             <h3>Surfboard Rental</h3>
             <p>Choose from a wide range of surfboards to rent for your next surfing adventure.</p>
             <a href="{% url 'book_lesson' %}" class="btn btn-primary">Book a Surfboard</a>
         </div>
-        <div class="col-md-4">
+        <div class="service">
+            <img src="{% static 'images/lessons.jpg' %}" alt="Surfing Lessons">
             <h3>Surfing Lessons</h3>
             <p>Learn to surf with our experienced instructors in a safe and fun environment.</p>
+            <p>We recommend bringing a swimsuit, towel, sunscreen, and a positive attitude! 💙🤸‍♀️💦</p>
             <a href="{% url 'book_lesson' %}" class="btn btn-primary">Book a Lesson</a>
         </div>
-        <div class="col-md-4">
+        <div class="service">
+            <img src="{% static 'images/group_session.jpg' %}" alt="Group Sessions">
             <h3>Group Sessions</h3>
             <p>Join group sessions and enjoy surfing with others while learning new skills.</p>
             <a href="{% url 'book_lesson' %}" class="btn btn-primary">Book a Group Session</a>
         </div>
     </div>
-
-    <h2 class="mt-5">What Our Customers Say</h2>
-    <p>"Amazing surfing lessons! Highly recommend." - Monty Morgan</p>
-    <p>"Great instructors and fantastic service!" - Mulan Mak</p>
-    <a href="#" class="btn btn-primary">Join Our Happy Customers</a>
-
-    <h2 class="mt-5">Frequently Asked Questions</h2>
-    <h3>How do I book a lesson?</h3>
-    <p>You can book a lesson by clicking on the "Book Now" button and filling out the form.</p>
-    <h3>What should I bring to my lesson?</h3>
-    <p>We recommend bringing a swimsuit, towel, sunscreen, and a positive attitude!</p>
-    <a href="{% url 'book_lesson' %}" class="btn btn-primary">Book Your Lesson Now</a>
 </div>
 {% endblock %}
+

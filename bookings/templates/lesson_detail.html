@@ -1,0 +1,9 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+<h1>{{ lesson.title }}</h1>
+<p>{{ lesson.description }}</p>
+<p>Instructor: {{ lesson.instructor }}</p>
+<p>Date: {{ lesson.date }}</p>
+<p>Time: {{ lesson.time }}</p>
+<a href="{% url 'book_lesson' %}" class="btn btn-primary">Book This Lesson</a>
+{% endblock %}

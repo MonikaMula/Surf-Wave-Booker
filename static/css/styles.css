@@ -1,32 +1,32 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     background-color: #343a40;
     padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
     color: #fff;
-    display: inline;
     margin: 0;
-}
-
-header nav {
-    float: right;
 }
 
 header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    gap: 1rem;
 }
 
 header nav ul li {
     display: inline;
-    margin-left: 1rem;
 }
 
 header nav ul li a {
@@ -34,52 +34,148 @@ header nav ul li a {
     text-decoration: none;
 }
 
-.hero {
-    height: 90vh;
-    background: url("{% static 'images/hero.jpg' %}") no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.jumbotron {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    color: white;
+    padding: 15px;
+}
+
+.navbar h1 {
+    float: left;
+    margin: 0;
+}
+
+.navbar nav {
+    float: right;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    padding: 0 10px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-section {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
-.hero .container {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 2rem;
-    border-radius: 10px;
+.hero-text h2 {
+    font-size: 50px;
+    margin: 0;
 }
 
-.hero .hero-text h1 {
-    font-size: 4rem;
-    color: white;
+.hero-text p {
+    font-size: 20px;
 }
 
-.hero .hero-text p {
-    font-size: 1.5rem;
+.hero-text .btn {
+    background-color: #f04e30;
     color: white;
-}
-
-.hero .hero-text .btn {
-    background-color: #007bff;
-    border: none;
-    color: white;
-    padding: 1rem 2rem;
+    padding: 10px 20px;
     text-decoration: none;
-    font-size: 1.2rem;
     border-radius: 5px;
-    margin-top: 1rem;
+    font-size: 20px;
+}
+
+.services-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service {
+    width: 30%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+}
+
+.service h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.service p {
+    font-size: 16px;
 }
 
 footer {
-    background-color: #343a40;
-    color: #fff;
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 2rem 0;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
 }
 
 footer .social-links a {
-    color: #007bff;
-    text-decoration: none;
-    margin: 0 1rem;
+    margin: 0 10px;
     font-size: 1.5rem;
+    color: #fff;  
 }
