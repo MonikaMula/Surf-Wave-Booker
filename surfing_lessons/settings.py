@@ -9,8 +9,8 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Security settings
 SECRET_KEY = env('SECRET_KEY')
-DEBUG = env.bool('DEBUG', default=True)
-ALLOWED_HOSTS = []
+DEBUG = env.bool('DEBUG', default=False)
+ALLOWED_HOSTS = ['.herokuapp.com']
 
 # Application definition
 INSTALLED_APPS = [
