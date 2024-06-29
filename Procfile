@@ -1,1 +1,1 @@
-web: gunicorn my_project.wsgi
+web: gunicorn surfing_lessons.wsgi

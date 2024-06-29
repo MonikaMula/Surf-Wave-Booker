@@ -10,7 +10,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # Security settings
 SECRET_KEY = env('SECRET_KEY')
 DEBUG = env.bool('DEBUG', default=False)
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1:8000', '127.0.0.1','.herokuapp.com', 'surfwavebooker.herokuapp.com', 'surfwavebooker-06be2e55d2c6.herokuapp.com']
 
 # Application definition
 INSTALLED_APPS = [
