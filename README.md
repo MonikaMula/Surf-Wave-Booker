@@ -1,6 +1,6 @@
 # Surf Wave Booker
 
-Surf Wave Booker is a web application for booking surfboard rentals and surfing lessons. Users can browse available lessons, book lessons, view their bookings, and manage lessons. The application also includes sections for a blog, FAQ, and contact form.
+Surf Wave Booker is a web application for booking surfboard rentals and surfing lessons. Users can browse available lessons, book lessons, view their bookings, and manage lessons. 
 
 ## Features
 
