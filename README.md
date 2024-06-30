@@ -19,5 +19,4 @@ Surf Wave Booker is a web application for booking surfboard rentals and surfing 
 - Bootstrap
 - Font Awesome
 
-
-
+## My project still needs a lot of work, also I am getting Server Error 500 in my Heroku
