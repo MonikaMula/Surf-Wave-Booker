@@ -19,5 +19,5 @@ Surf Wave Booker is a web application for booking surfboard rentals and surfing 
 - Bootstrap
 - Font Awesome
 
-## Installation
+
 
