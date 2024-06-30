@@ -1,10 +1,23 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Surf Wave Booker
 
-# This template has been deprecated
+Surf Wave Booker is a web application for booking surfboard rentals and surfing lessons. Users can browse available lessons, book lessons, view their bookings, and manage lessons. The application also includes sections for a blog, FAQ, and contact form.
 
-Please use (and bookmark) this template instead: [CI Full Template](https://github.com/Code-Institute-Org/ci-full-template)
+## Features
 
-Any projects built using the old template will continue to work. For all new projects, please use the **CI Full Template**, which will be updated more frequently.
+- Surfboard rentals
+- Surfing lessons
+- Group sessions
+- User authentication (login, signup)
+- Contact form
+- Responsive design
 
----
-Happy coding!
+## Requirements
+
+- Python 3.10
+- Django 5.0.6
+- Gunicorn
+- Bootstrap
+- Font Awesome
+
+## Installation
+
